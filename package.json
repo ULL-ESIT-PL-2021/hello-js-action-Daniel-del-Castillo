@@ -2,9 +2,10 @@
   "name": "hello-world-javascript-action",
   "version": "1.0.0",
   "description": "A github action that output hello world",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx ncc build index.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/ULL-ESIT-PL-2021/hello-js-action-Daniel-del-Castillo#readme",
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "@actions/github": "^4.0.0"
+    "@actions/github": "^4.0.0",
+    "@vercel/ncc": "^0.27.0"
   }
 }
