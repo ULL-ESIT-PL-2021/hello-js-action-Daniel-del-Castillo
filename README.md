@@ -16,7 +16,7 @@ The time we greeted you.
 
 ## Example usage
 
-```
+```yml
 uses:  ULL-ESIT-PL-2021/hello-js-action-Daniel-del-Castillo@v1
 with:
   who-to-greet: 'Mona the Octocat'
