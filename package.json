@@ -1,30 +1,34 @@
 {
-  "name": "hello-world-javascript-action",
+  "name": "javascript-action",
   "version": "1.0.0",
-  "description": "A github action that output hello world",
-  "main": "dist/index.js",
+  "description": "JavaScript Action made from the JavaScript Action template",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx ncc build index.js"
+    "lint": "eslint .",
+    "prepare": "ncc build index.js -o dist --source-map --license licenses.txt",
+    "test": "jest",
+    "all": "npm run lint && npm run prepare && npm run test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ULL-ESIT-PL-2021/hello-js-action-Daniel-del-Castillo.git"
+    "url": "git+https://github.com/ULL-ESIT-PL-2021/hello-js-action-Daniel-del-Castillo/tree/optional"
   },
   "keywords": [
     "ULL",
     "PL",
-    "GitHub Action"
+    "GitHub",
+    "Actions",
+    "JavaScript"
   ],
-  "author": "Daniel del Castillo de la Rosa <alu0101225548@ull.edu.es> (https://github.com/Daniel-del-Castillo)",
-  "license": "Unlicense",
-  "bugs": {
-    "url": "https://github.com/ULL-ESIT-PL-2021/hello-js-action-Daniel-del-Castillo/issues"
-  },
-  "homepage": "https://github.com/ULL-ESIT-PL-2021/hello-js-action-Daniel-del-Castillo#readme",
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/ULL-ESIT-PL-2021/hello-js-action-Daniel-del-Castillo/tree/optional#readme",
   "dependencies": {
-    "@actions/core": "^1.2.6",
-    "@actions/github": "^4.0.0",
-    "@vercel/ncc": "^0.27.0"
+    "@actions/core": "^1.2.5"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.27.0",
+    "eslint": "^7.4.0",
+    "jest": "^26.6.3"
   }
 }

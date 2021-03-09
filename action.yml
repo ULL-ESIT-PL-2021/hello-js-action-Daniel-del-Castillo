@@ -1,13 +1,17 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Wait'
+description: 'Wait a designated number of milliseconds'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  milliseconds:  # id of input
+    description: 'number of milliseconds to wait'
     required: true
-    default: 'World'
+    default: '1000'
+  name:  # id of input
+    description: 'name for the approval'
+    required: true
+    default: 'Casiano'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  time: # output will be available to future steps
+    description: 'The message to output'
 runs:
   using: 'node12'
   main: 'dist/index.js'
